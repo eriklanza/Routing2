@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html>
+		<head>
+			<meta charset="utf-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+			<link href="css/bootstrap.css" rel="stylesheet">
+            <link href="css/font-awesome.min.css" rel="stylesheet">
+			<link href="css/style.css" rel="stylesheet">
+			<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+		
+			<script src="js/jquery.js"></script>
+			<script src="js/custom.js"></script>
+		</head>
+
+
+		<body>
+	<!-- HEADER or navbar--> 
+        <div id="arrow2">
+            <i class="fa fa-arrow-circle-down fa-3x"></i>
+        </div>
+    	<header>
+        	<nav>
+                <a id="logo">
+                    <img src="images/LOGO.png" width="60px">
+                    GREEN ROUTING
+                </a>
+                 <div id="arrow">
+                  <i class="fa fa-arrow-circle-up fa-lg"></i>
+                </div>
+
+                <a id="login">Login</a>
+            </nav>
+        </header>
+        
+    <!-- BODY -->
+        <div class="container">
+        
+        	
+    <!-- SEARCH FORM -->
+
+                
+            	<div class="col-md-4" id="cont2">
+
+                	
+                	<div id="form">
+
+                        <button id="showSearch"><span class="icon"><i class="fa fa-search-plus fa-lg"></i></span></button>
+                        
+                    	<div id="searchForm" action="">
+
+                            <button id="hideSearch">X</button>
+                            <h2 id="searchTitle">Search</h2>
+                            <input type="text" class="fields" placeholder="From...">
+                            <input type="text" class="fields" placeholder="Destination...">
+                            <label for="passengers">Number of passengers</label>
+                            <input type="number" id="passengers" placeholder="#">
+
+                            <div>
+                            	<input type="button" id="now" class="lpass" value="Now">
+                            	<input type="button" id="later" class="lpass" value="Later">
+    <!-- LATER FORM -->
+                                <div id="laterform">
+                                	<input type="time">
+                                    <input type="date">
+                                </div>
+                            </div>
+                            <input type="submit" value="Search" class="button1" id="search">
+
+                        </div>
+
+    <!-- PREFERENCES -->
+
+                        <button id="showPreferences"><span class="icon"><i class="fa fa-cog fa-lg"></i></span></button>
+                        <button id="showContent2"></button>
+
+                        <div id="preferences">
+                            
+                            <button id="hidePreferences">X</button>
+                            <h2 id="prefTitle">Preferences</h2>
+
+                        	<div id="share">  
+                            	<p>Save and share preferences</p>
+                                <img src="images/1445948559_button_share.png" width="25" height="25">
+                                <img src="images/1445948702_save.png" width="25" height="25">
+                            </div>
+
+     <!-- DISTANCE & SPEED -->
+                            <div id="distance"> 
+                            	<p>Distance & Speed</p> 
+                                <input type="text" class="fields2" placeholder="Max. walking distance (km)">
+                                <label class="labels">Walking Speed</label>
+                                 <select class="fields3">
+                                	<option value="Fast">Fast</option>
+                                    <option value="Medium">Medium</option>
+                                    <option value="Slow"> Slow</option>
+                                </select>
+                                <input type="text" class="fields2" placeholder="Max. biking distance (km/h)">
+                                <label class="labels">Biking Speed</label>
+                                 <select class="fields3">
+                                	<option value="Fast">Fast</option>
+                                    <option value="Medium">Medium</option>
+                                    <option value="Slow"> Slow</option>
+                                </select>
+                            </div>
+    <!-- PRIVATE AND TRANSPORT -->
+                             <div id="transport"> 
+                             	<p>Private transport</p> 
+                             	<input type="text" class="fields2" placeholder="Fuel consumption (L/km)">
+                                <label class="labels">Car Type</label>
+                                <select class="fields3">
+                                	<option value="Fast">Petrol</option>
+                                    <option value="Medium">Diesel</option>
+                                    <option value="Slow">electric</option>
+                                </select>
+                                <input type="text" class="fields2" placeholder="CO2 emission (g/km)">
+                                <label class="labels">Car Size</label>
+                                <select class="fields3">
+                                	<option value="Fast">Large</option>
+                                    <option value="Medium">Medium</option>
+                                    <option value="Slow"> Small</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                    </div>
+                	
+                </div>
+
+				 <div class="col-md-8" id="cont">
+                    <button id="showContent"></button>
+                    <div id="content">
+                        <button id="hideContent">X</button>
+                        <div id="title">
+                            <h1>Southwest Finland Routing</h1>
+                            <h4>Discover the journey to your destinaton. </h4>
+                        </div>
+                        <!-- information regarding the application -->
+                        <div id="infoBlocks">
+
+                            <img src="images/vehicle12.svg" width="50px" height="50px">
+                            <img src="images/car80.svg" width="50px" height="50px">
+                            <img src="images/bike15.svg" width="50px" height="50px">
+                            <img src="images/man-silhouette1.svg" width="50px" height="50px">
+
+                            <p id="block1">Based on your search and preference you set, different possible routes are searched. You can see the
+                             details of your journey for bus, car, bike and walking. You can also be able to view your route in map. Route which
+                              does not fit your preference is simply discarded and not displayed in the result</p>
+
+                             <img src="images/tree101.svg" width="50px" height="50px"> 
+
+                            <p id="block2">Based on your preferance and your journey, the amount of carbondioxide(co2) produced is calculated.
+                             It is indicated by the tree - one tree indicator indicates that one healthy tree is required to compensate the 
+                             carbon you have emitted throughout your journey. Calculation on your public bus journey is based on 18persons/bus
+                              assumption.There is no carbon emmision on bike and walking route.</p>
+
+                            <img src="images/gsmlogo.png" width="150px">
+                            <img src="images/cip.png" width="120px">
+                        </div>
+                    </div>
+
+                    <!-- Content2 contains the search results when click on search. It is hidden by default-->
+
+                    <div id="content2">
+                        <!-- Walk, bus, car, bike option icons, as well as view next and view all options -->
+                        <div class="row" id="transOp">
+                            <div class="col-sm-6">
+                                <button class="transOptions"><img src="images/vehicle12.svg" width="20px"></button>
+                                <button class="transOptions"><img src="images/car80.svg" width="20px"></button>
+                                <button class="transOptions"><img src="images/bike15.svg" width="20px"></button>
+                                <button class="transOptions"><img src="images/man-silhouette1.svg" width="20px"></button>
+                            </div>
+                            <div class="col-sm-6" id="viewButtons">
+                                <button id="viewAll">View all</button>
+                                <button id="viewNext">Next</button>
+                            </div>
+                        </div>
+
+                        <!-- Transportation data, each block contains a different route and path-->
+                        <div class="row" id="transData">
+
+                            <div class="row headData">
+                                <div class="routeCol"><span class="routeDetails"><i class="fa fa-arrow-circle-down fa-lg"></i></span> Route</div>
+                                <div class="co2Col"> CO2 Emission</div>
+                                <div class="distanceCol"> Distance</div>
+                                <div class="durationCol"> Duration</div>
+                                <div class="walkCol"> Walking</div>
+                            </div>
+
+                            <div class="row bodyData">
+
+                                <div class="routeCol">
+                                    <img src="images/man-silhouette1.svg" width="20px">
+                                    <span>315m</span>
+                                    <img src="images/vehicle12.svg" width="20px">
+                                    <span>70m</span>
+                                    <img src="images/man-silhouette1.svg" width="20px">
+                                </div>
+
+                                <div class="co2Col">140g</div>
+                                <div class="distanceCol"> 4.3km</div>
+                                <div class="durationCol"> 22 min</div>
+                                <div class="walkCol"> 396m</div>
+                            </div>
+
+                        </div>
+
+                        <div class="row transData">
+
+                            <div class="row headData">
+                                <div class="routeCol"><span class="routeDetails"><i class="fa fa-arrow-circle-down fa-lg"></i></span> Route</div>
+                                <div class="co2Col"> CO2 Emission</div>
+                                <div class="distanceCol"> Distance</div>
+                                <div class="durationCol"> Duration</div>
+                                <div class="walkCol"> Walking</div>
+                            </div>
+
+                            <div class="row bodyData">
+
+                                <div class="routeCol">
+                                    <img src="images/man-silhouette1.svg" width="20px">
+                                    <span>315m</span>
+                                    <img src="images/vehicle12.svg" width="20px">
+                                    <span>70m</span>
+                                    <img src="images/man-silhouette1.svg" width="20px">
+                                </div>
+
+                                <div class="co2Col">140g</div>
+                                <div class="distanceCol"> 4.3km</div>
+                                <div class="durationCol"> 22 min</div>
+                                <div class="walkCol"> 396m</div>
+                            </div>
+
+                        </div>
+
+
+                            <div class="row transData">
+
+                            <div class="row headData">
+                                <div class="routeCol"><span class="routeDetails"><i class="fa fa-arrow-circle-down fa-lg"></i></span> Route</div>
+                                <div class="co2Col"> CO2 Emission</div>
+                                <div class="distanceCol"> Distance</div>
+                                <div class="durationCol"> Duration</div>
+                                <div class="walkCol"> Walking</div>
+                            </div>
+
+                            <div class="row bodyData">
+
+                                <div class="routeCol">
+                                    <img src="images/man-silhouette1.svg" width="20px">
+                                    <span>315m</span>
+                                    <img src="images/vehicle12.svg" width="20px">
+                                    <span>70m</span>
+                                    <img src="images/man-silhouette1.svg" width="20px">
+                                </div>
+
+                                <div class="co2Col">140g</div>
+                                <div class="distanceCol"> 4.3km</div>
+                                <div class="durationCol"> 22 min</div>
+                                <div class="walkCol"> 396m</div>
+                            </div>
+
+                        </div>
+
+                        <div class="row transData">
+
+                            <div class="row headData">
+                                <div class="routeCol"><span class="routeDetails"><i class="fa fa-arrow-circle-down fa-lg"></i></span> Route</div>
+                                <div class="co2Col"> CO2 Emission</div>
+                                <div class="distanceCol"> Distance</div>
+                                <div class="durationCol"> Duration</div>
+                                <div class="walkCol"> Walking</div>
+                            </div>
+
+                            <div class="row bodyData">
+
+                                <div class="routeCol">
+                                    <img src="images/man-silhouette1.svg" width="20px">
+                                    <span>315m</span>
+                                    <img src="images/vehicle12.svg" width="20px">
+                                    <span>70m</span>
+                                    <img src="images/man-silhouette1.svg" width="20px">
+                                </div>
+
+                                <div class="co2Col">140g</div>
+                                <div class="distanceCol"> 4.3km</div>
+                                <div class="durationCol"> 22 min</div>
+                                <div class="walkCol"> 396m</div>
+                            </div>
+
+                        </div>
+
+                        <div class="row transData">
+
+                            <div class="row headData">
+                                <div class="routeCol"><span class="routeDetails"><i class="fa fa-arrow-circle-down fa-lg"></i></span> Route</div>
+                                <div class="co2Col"> CO2 Emission</div>
+                                <div class="distanceCol"> Distance</div>
+                                <div class="durationCol"> Duration</div>
+                                <div class="walkCol"> Walking</div>
+                            </div>
+
+                            <div class="row bodyData">
+
+                                <div class="routeCol">
+                                    <img src="images/man-silhouette1.svg" width="20px">
+                                    <span>315m</span>
+                                    <img src="images/vehicle12.svg" width="20px">
+                                    <span>70m</span>
+                                    <img src="images/man-silhouette1.svg" width="20px">
+                                </div>
+
+                                <div class="co2Col">140g</div>
+                                <div class="distanceCol"> 4.3km</div>
+                                <div class="durationCol"> 22 min</div>
+                                <div class="walkCol"> 396m</div>
+                            </div>
+
+                        </div>
+
+                        <div class="row transData">
+
+                            <div class="row headData">
+                                <div class="routeCol"><span class="routeDetails"><i class="fa fa-arrow-circle-down fa-lg"></i></span> Route</div>
+                                <div class="co2Col"> CO2 Emission</div>
+                                <div class="distanceCol"> Distance</div>
+                                <div class="durationCol"> Duration</div>
+                                <div class="walkCol"> Walking</div>
+                            </div>
+
+                            <div class="row bodyData">
+
+                                <div class="routeCol">
+                                    <img src="images/man-silhouette1.svg" width="20px">
+                                    <span>315m</span>
+                                    <img src="images/vehicle12.svg" width="20px">
+                                    <span>70m</span>
+                                    <img src="images/man-silhouette1.svg" width="20px">
+                                </div>
+
+                                <div class="co2Col">140g</div>
+                                <div class="distanceCol"> 4.3km</div>
+                                <div class="durationCol"> 22 min</div>
+                                <div class="walkCol"> 396m</div>
+                            </div>
+
+                        </div>
+
+                        <div class="row transData">
+
+                            <div class="row headData">
+                                <div class="routeCol"><span class="routeDetails"><i class="fa fa-arrow-circle-down fa-lg"></i></span> Route</div>
+                                <div class="co2Col"> CO2 Emission</div>
+                                <div class="distanceCol"> Distance</div>
+                                <div class="durationCol"> Duration</div>
+                                <div class="walkCol"> Walking</div>
+                            </div>
+
+                            <div class="row bodyData">
+
+                                <div class="routeCol">
+                                    <img src="images/man-silhouette1.svg" width="20px">
+                                    <span>315m</span>
+                                    <img src="images/vehicle12.svg" width="20px">
+                                    <span>70m</span>
+                                    <img src="images/man-silhouette1.svg" width="20px">
+                                </div>
+
+                                <div class="co2Col">140g</div>
+                                <div class="distanceCol"> 4.3km</div>
+                                <div class="durationCol"> 22 min</div>
+                                <div class="walkCol"> 396m</div>
+                            </div>
+
+                        </div>
+                        <div class="row transData">
+
+                            <div class="row headData">
+                                <div class="routeCol"><span class="routeDetails"><i class="fa fa-arrow-circle-down fa-lg"></i></span> Route</div>
+                                <div class="co2Col"> CO2 Emission</div>
+                                <div class="distanceCol"> Distance</div>
+                                <div class="durationCol"> Duration</div>
+                                <div class="walkCol"> Walking</div>
+                            </div>
+
+                            <div class="row bodyData">
+
+                                <div class="routeCol">
+                                    <img src="images/man-silhouette1.svg" width="20px">
+                                    <span>315m</span>
+                                    <img src="images/vehicle12.svg" width="20px">
+                                    <span>70m</span>
+                                    <img src="images/man-silhouette1.svg" width="20px">
+                                </div>
+
+                                <div class="co2Col">140g</div>
+                                <div class="distanceCol"> 4.3km</div>
+                                <div class="durationCol"> 22 min</div>
+                                <div class="walkCol"> 396m</div>
+                            </div>
+
+                        </div>
+                   
+                    </div>
+
+                </div>
+            
+            </div>
+
+		</body>
+
+</html>
